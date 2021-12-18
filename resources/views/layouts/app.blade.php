@@ -63,25 +63,25 @@
                   ullam modi saepe corporis dignissimos quas minima velit. 
                   Blanditiis sed cupiditate sequi earum,
                  ex ab enim illum? Nostrum explicabo accusamus ex?
-                </div>
-                <div class="w-175">
-                    <nav class="flex items-center justify-between text-xs">
-                        <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
-                            <li><a href="#" class="border-b-4 pb-3 border-blue">All Ideas (87)</a></li>
-                            <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Considering (6)</a></li>
-                            <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">In Progress (1)</a></li>
-                        </ul>
+            </div>
+            <div class="w-175">
+                <nav class="flex items-center justify-between text-xs">
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li><a href="#" class="border-b-4 pb-3 border-blue">All Ideas (87)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Considering (6)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">In Progress (1)</a></li>
+                    </ul>
 
-                        <ul class="flex upercase font-semibold border-b-4 pb-3 space-x-10">
-                            <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Implement (10)</a></li>
-                            <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (1)</a></li>
-                        </ul>
-                    </nav>
+                    <ul class="flex upercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Implement (10)</a></li>
+                        <li><a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (1)</a></li>
+                    </ul>
+                </nav>
 
-                    <div class="mt-8">
-                        {{ $slot }}
-                    </div>
+                <div class="mt-8">
+                    {{ $slot }}
                 </div>
+            </div>
 
         </main>
     </body>
