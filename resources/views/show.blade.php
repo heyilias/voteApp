@@ -37,18 +37,27 @@
                   <div>&bull;</div>
                   <div class="text-gray-900">3 Comments</div>
                </div>
-               <div class="flex items-center space-x-2">
+               <div 
+                  x-data="{ isOpen:false }"
+                  class="flex items-center space-x-2">
                   <div class="bg-gray-200 text-xxs font-semibold uppercase leading-none rounded-full
                      text-center w-28 h-7 px-4 py-2">Open
                   </div>
-                  <button class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
+                  <button 
+                     @click ="isOpen = !isOpen"
+                     class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
                      <svg fill="currentColor" width="24" height="6">
                         <path d="M2.97.061A2.969
                         2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
                         2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
                         2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                      </svg>
-                     <ul class="hidden absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                     <ul
+                        @keydown.escape.window="isOpen = false"
+                        x-cloak  {{-- addresses this scenario by hiding the element it's attached to until Alpine is fully loaded on the page. --}}
+                        x-show.transition.origin.top.left="isOpen" 
+                        @click.away = "isOpen=false"
+                        class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
                         <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
                         <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Delete Post</a></li>
                      </ul>
@@ -63,14 +72,24 @@
 
    <div class="buttons-container flex items-center mt-3">
       <div class="flex items-center space-x-4 ml-6">
-         <div class="relative">
-            <button type="button"
+         <div 
+            class="relative"
+            x-data="{ isOpen: false }"
+            >
+            <button 
+               type="button"
+               @click="isOpen = !isOpen"
               class="flex items-center justify-center w-32 h-11 text-sm font-semibold bg-blue text-white rounded-xl
                    border border-blue hover:bg-blue-hover transition duration-150 ease-in px-8 py-3">
                  Reply
             </button>
 
-            <div class="hidden absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
+            <div 
+               @keydown.escape.window="isOpen = false"
+               x-cloak  {{-- addresses this scenario by hiding the element it's attached to until Alpine is fully loaded on the page. --}}
+               x-show.transition.origin.top.left="isOpen" 
+               @click.away = "isOpen=false"
+               class=" absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
                <form action="#" class="space-y-4 px-4 py-6">
                   <div>
                      <textarea name="post_comment" id="post_comment" cols="30" rows="4"
@@ -98,9 +117,12 @@
          </div>{{-- END SHOW DIALOG FOR REPLY --}}
 
          {{-- SET STATUS --}}
-         <div class="relative">
+         <div class="relative"
+              x-data="{ isOpen: false }"
+         >
 
             <button type="button" 
+                  @click="isOpen = !isOpen"
                   class="flex items-center justify-center w-32 h-11 text-sm font-semibold rounded-xl border 
                   border-gray-200 hover:bg-gray-400 bg-gray-200 transition duration-150 ease-in px-4 py-3 ml-3">
                <span>Set Status</span>
@@ -109,7 +131,12 @@
                </svg>
             </button>
 
-            <div class="absolute z-20 w-76 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
+            <div 
+               @keydown.escape.window="isOpen = false"
+               x-cloak  {{-- addresses this scenario by hiding the element it's attached to until Alpine is fully loaded on the page. --}}
+               x-show.transition.origin.top.left="isOpen" 
+               @click.away = "isOpen=false"
+               class="absolute z-20 w-76 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
                <form action="#" class="space-y-4 px-4 py-6">
                   <div class="space-y-2">
                      <div>
@@ -214,15 +241,24 @@
                      <div class="font-bold text-gray-900">John Doe</div>
                      <div>10 hours ago</div>
                   </div>
-                  <div class="flex items-center space-x-2">
-                     <button class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
+                  <div 
+                     x-data="{ isOpen: false}"
+                     class="flex items-center space-x-2">
+                     <button 
+                        @click="isOpen = !isOpen"
+                        class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
                         <svg fill="currentColor" width="24" height="6">
                            <path d="M2.97.061A2.969
                            2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
                            2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
                            2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                         </svg>
-                        <ul class="hidden absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                        <ul 
+                           @keydown.escape.window="isOpen = false"
+                           x-cloak  {{-- addresses this scenario by hiding the element it's attached to until Alpine is fully loaded on the page. --}}
+                           x-show.transition.origin.top.left="isOpen" 
+                           @click.away = "isOpen=false"
+                           class="absolute z-10 w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Delete Post</a></li>
                         </ul>
