@@ -40,24 +40,19 @@
                font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3">VOTE</button>
             </div>
          </div>
-         <div class="flex px-2 py-6">
-            <a href="#" class="flex-none">
-               <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
-            </a>
-            <div class="mx-4">
+         <div class="flex flex-1 px-2 py-6">
+            <div class="flex-none">
+               <a href="#">
+                  <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+               </a>
+            </div>
+            
+            <div class="w-full mx-4">
                <h4 class="text-xl font-semibold">
                   <a href="#" class="hover:underline">A random title can go here</a>
                </h4>
                <div class="text-gray-600 mt-3 line-clamp-3">
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                   Aliquam nobis odit tempore perspiciatis voluptate consequatur facilis perferendis illo 
-                   excepturi saepe reiciendis veniam, beatae ipsa libero asperiores dolores repellat quae 
-                   eaque modi incidunt natus quos consectetur eos minima? Fugiat reprehenderit tempora 
-                   enim laborum repellendus voluptates reiciendis, quia et? Accusantium, nihil sint
-                   eaque modi incidunt natus quos consectetur eos minima? Fugiat reprehenderit tempora 
-                   enim laborum repellendus voluptates reiciendis, quia et? Accusantium, nihil sint
-                   eaque modi incidunt natus quos consectetur eos minima? Fugiat reprehenderit tempora 
-                   enim laborum repellendus voluptates reiciendis, quia et? Accusantium, nihil sint
+                   Lorem ipsum dolor, sit amet consectetur
                </div>
                
                
@@ -73,9 +68,12 @@
                      <div class="bg-gray-200 text-xxs font-semibold uppercase leading-none rounded-full
                         text-center w-28 h-7 px-4 py-2">Open
                      </div>
-                     <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                     <button class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
+                        <svg fill="currentColor" width="24" height="6">
+                           <path d="M2.97.061A2.969
+                           2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
+                           2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
+                           2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                         </svg>
                         <ul class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
@@ -103,7 +101,7 @@
          </div>
          <div class="flex px-2 py-6">
             <a href="#" class="flex-none">
-               <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+               <img src="https://source.unsplash.com/200x200/?face&crop=face&v=7" alt="avatar" class="w-14 h-14 rounded-xl  ">
             </a>
             <div class="mx-4">
                <h4 class="text-xl font-semibold">
@@ -131,12 +129,15 @@
                      <div class="text-gray-900">3 Comments</div>
                   </div>
                   <div class="flex items-center space-x-2">
-                     <div class="bg-yellow text-xxs font-semibold uppercase leading-none rounded-full
+                     <div class="bg-yellow text-white text-xxs font-semibold uppercase leading-none rounded-full
                         text-center w-28 h-7 px-4 py-2">IN PROGRESS
                      </div>
                      <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        <svg fill="currentColor" width="24" height="6">
+                           <path d="M2.97.061A2.969
+                           2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
+                           2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
+                           2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                         </svg>
                         <ul class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8 hidden">
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
@@ -164,7 +165,7 @@
          </div>
          <div class="flex px-2 py-6">
             <a href="#" class="flex-none">
-               <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+               <img src="https://source.unsplash.com/200x200/?face&crop=face&v=4" alt="avatar" class="w-14 h-14 rounded-xl  ">
             </a>
             <div class="mx-4">
                <h4 class="text-xl font-semibold">
@@ -192,12 +193,15 @@
                      <div class="text-gray-900">3 Comments</div>
                   </div>
                   <div class="flex items-center space-x-2">
-                     <div class="bg-red text-xxs font-semibold uppercase leading-none rounded-full
+                     <div class="bg-red text-xxs text-white font-semibold uppercase leading-none rounded-full
                         text-center w-28 h-7 px-4 py-2">CLOSED
                      </div>
                      <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        <svg fill="currentColor" width="24" height="6">
+                           <path d="M2.97.061A2.969
+                           2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
+                           2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
+                           2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                         </svg>
                         <ul class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8 hidden">
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
@@ -225,7 +229,7 @@
          </div>
          <div class="flex px-2 py-6">
             <a href="#" class="flex-none">
-               <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+               <img src="https://source.unsplash.com/200x200/?face&crop=face&v=" alt="avatar" class="w-14 h-14 rounded-xl  ">
             </a>
             <div class="mx-4">
                <h4 class="text-xl font-semibold">
@@ -253,12 +257,15 @@
                      <div class="text-gray-900">3 Comments</div>
                   </div>
                   <div class="flex items-center space-x-2">
-                     <div class="bg-green text-xxs font-semibold uppercase leading-none rounded-full
+                     <div class="bg-green text-white text-xxs font-semibold uppercase leading-none rounded-full
                         text-center w-28 h-7 px-4 py-2">IMPLEMENTED
                      </div>
                      <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                        <svg fill="currentColor" width="24" height="6">
+                           <path d="M2.97.061A2.969
+                           2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97
+                           2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 
+                           2.97 0 0021.03.06z" style="color: rgba(163,163,163, .5)" />
                         </svg>
                         <ul class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8 hidden">
                            <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
