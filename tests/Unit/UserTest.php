@@ -26,6 +26,8 @@ class UserTest extends TestCase
              images/forum/avatars/default-avatar-1.png',
              $gravatarUrl
         );
+
         
-    }
+        
+    } 
 }
