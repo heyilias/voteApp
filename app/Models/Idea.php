@@ -42,6 +42,7 @@ class Idea extends Model
         return $this->belongsTo(Status::class);
     }
 
+    /*
     public function getStatusClasses()
     {
 
@@ -73,5 +74,6 @@ class Idea extends Model
 
         // return 'bg-gray-200';
     }
+    */
 
 }
