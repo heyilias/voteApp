@@ -1,4 +1,5 @@
 <x-app-layout>
+   {{-- Create Page Idea --}}
      <div>
         <a href="/example-app/public" class="flex items-center semibold hover:underline">
          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -12,7 +13,7 @@
       <div class="flex flex-1 flex-col md:flex-row px-4 py-6">
          <div class="flex-none mx-4">
             <a href="#">
-               <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+               <img src="{{ $idea->user->getAvatar() }}" alt="avatar" class="w-14 h-14 rounded-xl  ">
             </a>
          </div>
          
@@ -225,6 +226,7 @@
    </div> {{-- end button container --}}
 
 
+   {{-- START COMMENT CONTAINER --}}
    <div class="comments-container relative space-y-6 pt-4 md:ml-22 my-8 mt-1">
       <div class="comment-container relative bg-white rounded-xl flex mt-4">
          <div class="flex flex-col md:flex-row flex-1 px-4 py-6">

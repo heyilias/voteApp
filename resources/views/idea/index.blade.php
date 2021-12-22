@@ -1,4 +1,5 @@
 <x-app-layout>
+   {{-- Start Filters --}}
    <div class="filters flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6">
       <div class="w-full md:w-1/3">
          <select name="category" id="category" class="w-full border-none rounded-xl px-4 py-2">
@@ -61,7 +62,7 @@
             <div class="flex flex-1 flex-col md:flex-row px-2 py-6">
                <div class="flex-none mx-2 md:mx-0">
                   <a href="#">
-                     <img src="https://source.unsplash.com/200x200/?face" alt="avatar" class="w-14 h-14 rounded-xl  ">
+                     <img src="{{ $idea->user->getAvatar() }}" alt="avatar" class="w-14 h-14 rounded-xl  ">
                   </a>
                </div>
                
