@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Idea;
-use App\Models\Category;
+use App\Models\User;
 use App\Models\Status;
+use App\Models\Category;
+use App\Models\Vote;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,7 +18,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // Probleme
+        User::factory()->create([
+            'name' => 'ilias',
+            'email'=> "contact@ilias.ma",
+        ]);
         
+        User::factory(19)->create();
+        
+
         Status::factory()->create(['name' => 'Open','classes' =>'bg-gray-200']);
         Status::factory()->create(['name' => 'Considering','classes'=> 'bg-blue text-white']);
         Status::factory()->create(['name' => 'In Progress','classes' => 'bg-yellow text-white']);
@@ -28,6 +38,19 @@ class DatabaseSeeder extends Seeder
         Category::factory()->create(['name' => 'Category 3']);
         Category::factory()->create(['name' => 'Category 4']);
 
-        Idea::factory(30)->create();
+        Idea::factory(100)->create();
+
+        // Generated unique votes, Ensure idea_id are unique for each row
+        foreach(range(1,20) as $user_id){
+            foreach (range(1,100) as $idea_id) {
+                if($idea_id % 2 === 0){
+                    Vote::factory()->create([
+                        'user_id'=> $user_id,
+                        'idea_id'=> $idea_id,
+                    ]);
+                }
+               
+            }
+        }
     }
 }

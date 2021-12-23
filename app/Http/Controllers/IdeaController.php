@@ -15,7 +15,9 @@ class IdeaController extends Controller
      */
     public function index()
     {
-        return view('idea.index', ['ideas' => Idea::with('user','category','status')
+        return view('idea.index', [
+            'ideas' => Idea::with('user','category','status')
+        ->withCount('votes')
         ->orderBy('id','desc')
         ->simplePaginate(Idea::PAGINATION_COUNT),]);
     }
@@ -49,9 +51,11 @@ class IdeaController extends Controller
      */
     public function show(Idea $idea)
     {
+        //dd($idea->votes()); //dinn dumb
+
         return view('idea.show',[
             'idea' =>$idea,
-
+            'votesCount' => $idea->votes()->count(),
         ]);
     }
 
