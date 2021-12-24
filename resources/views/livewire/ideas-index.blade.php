@@ -17,7 +17,7 @@
         </select>
         </div>
         <div class="w-full md:w-2/3 relative">
-        <input type="search" placeholder="Find an idea"
+        <input wire:model="search" type="search" placeholder="Find an idea"
             class="w-full rounded-xl border-none bg-white placeholder-gray-900 px-4 py-2 pl-8 ">
         <div class="absolute top-0 flex itmes-center h-full ml-2">
             <svg class="w-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,13 +28,20 @@
     </div><!-- end filters -->
 
     <div class="ideas-container space-y-6 my-6">
-        @foreach ($ideas as $idea)
+        @forelse ($ideas as $idea)
         <livewire:idea-index 
             :key='$idea->id' 
             :idea='$idea' 
             :votesCount='$idea->votes_count'
         />
-        @endforeach
+        @empty
+            <div class="mx-auto w-70 mt-12">
+                <svg class="mx-auto w-16 h-16 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                <div class="text-gray-600 text-center font-bold mt-3"> No ideas were found...</div>
+            </div>
+        @endforelse
     </div><!-- ideas container -->
 
     <div class="my-8">
