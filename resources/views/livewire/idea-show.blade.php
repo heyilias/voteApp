@@ -59,11 +59,15 @@
                       <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
                    </div>
                    @if($hasVoted)
-                     <button class="w-20 bg-blue text-white border border-blue hover:bg-blue-hover
+                     <button 
+                     wire:click.prevent="vote" 
+                     class="w-20 bg-blue text-white border border-blue hover:bg-blue-hover
                        font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3 -mx-5">Voted
                      </button>
                    @else
-                     <button class="w-20 bg-gray-200 border border-gray-100 hover:border-gray-400
+                     <button 
+                     wire:click.prevent="vote" 
+                     class="w-20 bg-gray-200 border border-gray-100 hover:border-gray-400
                         font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3 -mx-5">Vote
                      </button>
                    @endif
@@ -214,14 +218,19 @@
              <div class="text-xl leading-snug @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
              <div class="text-gray-400 text-xs leading-none">Votes</div>
           </div>
+          {{-- for desctop --}}
           @if($hasVoted)
-            <button type="button" 
+            <button
+               type="button" 
+               wire:click.prevent = "vote"
                class="w-32 h-11 text-xs text-white uppercase font-semibold rounded-xl border 
                border-blue hover:bg-blue-hover bg-blue transition duration-150 ease-in px-6 py-3">
                <span>Voted</span>
             </button>
           @else
-            <button type="button" 
+            <button
+               type="button" 
+               wire:click.prevent = "vote"
                class="w-32 h-11 text-xs uppercase font-semibold rounded-xl border 
                border-gray-200 hover:border-gray-400 bg-gray-200 transition duration-150 ease-in px-6 py-3">
                <span>Vote</span>

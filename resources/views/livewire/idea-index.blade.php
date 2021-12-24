@@ -24,13 +24,17 @@
         
         <div class="mt-8">
             @if($hasVoted)
-                <button class="w-20 bg-blue border border-blue hover:bg-blue-hover text-white
+                <button 
+                wire:click.prevent="vote" 
+                class="w-20 bg-blue border border-blue hover:bg-blue-hover text-white
                 font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3">
                 VOTED</button>
             @else
-                <button class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400
-                font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3">
-                VOTE</button>
+                <button 
+                    wire:click.prevent="vote" 
+                    class="w-20 bg-gray-200 border border-gray-200 hover:border-gray-400
+                    font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3">
+                    VOTE</button>
             @endif
             
         </div>
@@ -91,13 +95,18 @@
                     <div class="text-sm font-bold leading-none @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
                     <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
                 </div>
+                {{-- for desktop --}}
                 @if($hasVoted)
-                    <button class="w-20 bg-blue border border-blue hover:bg-blue-hover text-white
+                    <button 
+                        wire:click.prevent="vote" 
+                        class="w-20 bg-blue border border-blue hover:bg-blue-hover text-white
                         font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3 -mx-5">
                         Voted
                     </button>
                 @else
-                    <button class="w-20 bg-gray-200 border border-gray-100 hover:border-gray-400
+                    <button 
+                        wire:click.prevent="vote" 
+                        class="w-20 bg-gray-200 border border-gray-100 hover:border-gray-400
                         font-bold text-xxs uppercase transition duration-150 ease-in rounded-xl px-4 py-3 -mx-5">
                         Vote
                     </button>
