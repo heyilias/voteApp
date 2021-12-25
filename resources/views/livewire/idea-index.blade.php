@@ -70,7 +70,7 @@
                 <div class="{{ $idea->status->classes }} text-xxs font-semibold uppercase leading-none rounded-full
                     text-center w-28 h-7 px-4 py-2">{{ $idea->status->name }}
                 </div>
-                <button 
+                {{-- <button 
                     @click="isOpen = !isOpen"
                     class="relative border bg-gray-100 hover:bg-gray-200 rounded-full h-7 transition duration-150 ease-in py-2 px-3">
                     <svg fill="currentColor" width="24" height="6">
@@ -81,14 +81,14 @@
                     </svg>
                     <ul 
                         @keydown.escape.window="isOpen = false"
-                        x-cloak  {{-- addresses this scenario by hiding the element it's attached to until Alpine is fully loaded on the page. --}}
+                        x-cloak  
                         x-show.transition.origin.top.left="isOpen" 
-                        @click.away = "isOpen=false" {{-- for hide the dialog after referesh page --}} 
+                        @click.away = "isOpen=false" 
                         class="absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 md:ml-8 top-8 md:top-6 right-0 md:left-0 ">
                         <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Mark As Spam</a></li>
                         <li><a href="#" class="hover:bg-gray-100 px-5 py-3 block transition duration-150 ease-in">Delete Post</a></li>
                     </ul>
-                </button>
+                </button> --}}
                 </div>
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
                 <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">

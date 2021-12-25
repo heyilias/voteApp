@@ -14,6 +14,8 @@
          :votesCount='$votesCount' 
       />
 
+      <livewire:edit-idea />
+
    {{-- START COMMENT CONTAINER --}}
       <div class="comments-container relative space-y-6 pt-4 md:ml-22 my-8 mt-1">
          <div class="comment-container relative bg-white rounded-xl flex mt-4">
