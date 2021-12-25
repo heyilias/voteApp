@@ -97,6 +97,8 @@ class Idea extends Model
         }
     }
 
+    
+
     /*
     public function getStatusClasses()
     {
