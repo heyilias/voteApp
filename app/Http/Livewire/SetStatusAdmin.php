@@ -29,6 +29,8 @@ class SetStatusAdmin extends Component
         $this->idea->status_id = $this->status;
         $this->idea->save();
 
+        //if(*this->)
+
         $this->emit('statusWasUpdated');
 
     }
